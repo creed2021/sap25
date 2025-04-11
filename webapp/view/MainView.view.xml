@@ -1,0 +1,19 @@
+<mvc:View controllerName="sydenoa.sydenoa.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+    <content>
+    <Panel id="panel1" headerText="{i18n>titulo}" >
+    <Label id="lbltitulo" labelFor="txTitulo" text="Ingrese el Titulo" ></Label>
+    <Input id="txtTitulo" width="200px" ></Input>
+     <Label id="lbltitulo2" labelFor="cbpais" text="Ingrese el Titulo" ></Label>
+    <Select id="cbpais" selectedKey="{combo>/CountryKey}" forceSelection="false" items="{combo>/countries}">
+    <items>
+    <core:Item id="item" key="{combo>key}" text="{combo>text}" />
+    </items>
+    </Select>
+    </Panel>
+    </content>
+    </Page>
+</mvc:View>

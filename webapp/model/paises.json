@@ -1,0 +1,26 @@
+{
+    "ShipName": "",
+    "CountryKey": "",
+    "countries": [
+      {
+        "key": "",
+        "text": ""
+      },
+      {
+        "key": "Afghanistan",
+        "text": "Afganistán"
+      },
+      {
+        "key": "Albania",
+        "text": "Albania"
+      },
+      {
+        "key": "Algeria",
+        "text": "Algeria"
+      },
+      {
+        "key": "American Samoa",
+        "text": "Samoa Americana"
+      }
+    ]
+  }
