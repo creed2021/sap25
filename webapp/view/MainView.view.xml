@@ -6,13 +6,22 @@
     <content>
     <Panel id="panel1" headerText="{i18n>titulo}" >
     <Label id="lbltitulo" labelFor="txTitulo" text="Ingrese el Titulo" ></Label>
-    <Input id="txtTitulo" width="200px" ></Input>
+    <Input id="txtTitulo" width="200px" value="{combo>/ShipName}" ></Input>
      <Label id="lbltitulo2" labelFor="cbpais" text="Ingrese el Titulo" ></Label>
     <Select id="cbpais" selectedKey="{combo>/CountryKey}" forceSelection="false" items="{combo>/countries}">
     <items>
     <core:Item id="item" key="{combo>key}" text="{combo>text}" />
     </items>
     </Select>
+    <Button id="btnFilter" text="filtro" icon="sap-icon://add-filter" press="onFilter" ></Button>
+    <Button id="btnClearFilter" text="Limpiar filtro" icon="sap-icon://add-filter" press="onClearFilter" ></Button>
+    </Panel>
+    <Panel id="panel2">
+    <List id="ListadoInvoices" width="auto" headerText="{i18n>titulo}" items="{/Invoices}">
+    <items>
+    <ObjectListItem id="obj1" title="{ShipName} - {CustomerName} - {Country}" number="{ExtendedPrice}" numberState="{=${ExtendedPrice} > 100 ? 'Success' : 'Warning' }" ></ObjectListItem>
+    </items>
+    </List>
     </Panel>
     </content>
     </Page>
