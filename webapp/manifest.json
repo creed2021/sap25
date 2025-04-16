@@ -94,12 +94,23 @@
           "target": [
             "TargetMainView"
           ]
+        },
+        {
+          "name": "RouteLoginView",
+          "pattern": "list",
+          "target": [
+            "TargetLoginView"
+          ]
         }
       ],
       "targets": {
         "TargetMainView": {
           "id": "MainView",
           "name": "MainView"
+        },
+        "TargetLoginView": {
+          "id": "LoginView",
+          "name": "LoginView"
         }
       }
     },

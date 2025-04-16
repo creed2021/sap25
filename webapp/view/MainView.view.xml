@@ -1,4 +1,4 @@
-<mvc:View controllerName="sydenoa.sydenoa.controller.MainView"
+  <mvc:View controllerName="sydenoa.sydenoa.controller.MainView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m" 
     xmlns:core="sap.ui.core">
@@ -15,6 +15,7 @@
     </Select>
     <Button id="btnFilter" text="filtro" icon="sap-icon://add-filter" press="onFilter" ></Button>
     <Button id="btnClearFilter" text="Limpiar filtro" icon="sap-icon://add-filter" press="onClearFilter" ></Button>
+    <Button id="btnLogin" text="Login" press="onLogin" icon="sap-icon://add-filter"></Button>
     </Panel>
     <Panel id="panel2">
     <List id="ListadoInvoices" width="auto" headerText="{i18n>titulo}" items="{/Invoices}">

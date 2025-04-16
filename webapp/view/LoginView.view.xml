@@ -1,0 +1,14 @@
+<mvc:View controllerName="sydenoa.sydenoa.controller.LoginView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
+    <Page id="page2" title="{i18n>title}">
+    <content>
+    <Label id="lblusuaurio" labelFor="txtusuario" text="Ingresar nombre usuario" />
+    <Input id="txtusuario" width="200px" ></Input>
+    <Label id="lblpassword" labelFor="txtpassword" text="Ingresar el password" />
+    <Input id="txtpassword" width="200px" ></Input>
+        <Button id="btnIngresar" press="onlogin" text="Ingresar a la app" ></Button>
+    </content>
+    </Page>
+  </mvc:View>

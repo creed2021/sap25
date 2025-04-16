@@ -23,8 +23,8 @@ sap.ui.define([
             filters.push(new Filter("ShipName",FilterOperator.Contains,Odata.ShipName));
         }
          
-        if (Odata.ControlKey !== ""){
-            filters.push(new Filter("Country",FilterOperator.EQ,Odata.ControlKey));
+        if (Odata.CountryKey !== ""){
+            filters.push(new Filter("Country",FilterOperator.EQ,Odata.CountryKey));
         }
 
         const list = this.getView().byId("ListadoInvoices");
@@ -36,6 +36,15 @@ sap.ui.define([
             const oView = this.getView().getModel("combo");
             oView.setProperty("/ShipName","");
             oView.setProperty("/CountryKey","");
+
+            const list = this.getView().byId("ListadoInvoices");
+            const oBinding = list.getBinding("items");
+            oBinding.filter([]);
+        },
+        onLogin:function(event){
+
+            var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("RouteLoginView");
         }
     });
 });
